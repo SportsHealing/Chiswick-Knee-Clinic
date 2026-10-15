@@ -318,6 +318,17 @@
   .esite .more .circ svg{width:13px;height:13px;stroke:#fff;fill:none;stroke-width:2}
   .esite:hover .more .circ{background:var(--gold)}
 
+  /* ---------- Mobile call / book bar ---------- */
+  .mbar{display:none}
+  @media(max-width:900px){
+    .mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;
+      padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:var(--primary-dark);
+      box-shadow:0 -8px 24px -12px rgba(0,0,0,.35)}
+    .mbar .btn{flex:1;justify-content:center;padding:13px 8px;font-size:14px;white-space:nowrap}
+    .mbar .btn:first-child{flex:0 0 38%}
+    body{padding-bottom:76px}
+  }
+
   /* ---------- Reveal animation ---------- */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
@@ -516,7 +527,7 @@
           <div class="fic"><svg viewBox="0 0 24 24"><path d="M4 18c4-9 12-9 16 0"/><circle cx="12" cy="7" r="2.4"/></svg></div>
           <div><h3>Recover fully</h3><p>Guided rehabilitation that restores confidence in movement, with take-home support from <a class="ilink" href="https://www.omkneehealth.com/" target="_blank" rel="noopener">Omknee Health</a>.</p></div>
         </div>
-        <a class="btn btn-primary" style="margin-top:8px" href="#surgeon">More about the clinic
+        <a class="btn btn-primary" style="margin-top:8px" href="#surgeon">Meet Mr Gupte
           <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
       </div>
     </div>
@@ -800,6 +811,12 @@
     </div>
   </div>
 </footer>
+
+<!-- ============ MOBILE CALL / BOOK BAR ============ -->
+<nav class="mbar" aria-label="Call or book">
+  <a class="btn btn-outline-light" href="tel:+442074835160" aria-label="Call 020 7483 5160">Call us</a>
+  <a class="btn btn-primary" href="#book">Book appointment</a>
+</nav>
 
 <script>
   function toggleNav(btn){
