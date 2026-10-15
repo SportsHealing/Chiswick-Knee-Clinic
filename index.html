@@ -94,7 +94,6 @@
   .brand .loc{font-family:var(--sans);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-text);font-weight:700;margin-top:4px}
   nav.main{margin-left:auto;display:flex;align-items:center;gap:30px}
   nav.main a{font-family:var(--display);font-weight:600;font-size:15px;color:var(--primary);position:relative}
-  nav.main a.has:after{content:"▾";font-size:11px;margin-left:5px;color:var(--gold-dark)}
   nav.main a:not(.cta):hover{color:var(--gold-text)}
   .nav-cta{margin-left:6px}
   .hamburger{display:none;margin-left:auto;background:var(--greige);border:none;border-radius:var(--r-sm);
@@ -185,9 +184,10 @@
   /* ---------- FAQ ---------- */
   .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
   .faq{background:var(--card);border-radius:var(--r-md);border:1px solid var(--line);overflow:hidden}
-  .faq button{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;
-    padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;
+  .faq summary{width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;
+    padding:20px 24px;cursor:pointer;text-align:left;list-style:none;
     font-family:var(--display);font-weight:600;font-size:17px;color:var(--primary)}
+  .faq summary::-webkit-details-marker{display:none}
   .faq .chev{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--primary-tint);
     display:grid;place-items:center;transition:transform .25s ease}
   .faq .chev svg{width:14px;height:14px;stroke:var(--primary);fill:none;stroke-width:2}
@@ -429,7 +429,7 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="main" id="nav">
-      <a class="has" href="https://www.sportshealing.com/knee-passport/" target="_blank" rel="noopener">Conditions</a>
+      <a href="https://www.sportshealing.com/knee-passport/" target="_blank" rel="noopener">Conditions</a>
       <a class="" href="https://www.chinmaygupte.com/knee-surgeon-london" target="_blank" rel="noopener">Treatments</a>
       <a class="" href="https://www.sportshealing.com/know-your-knee/" target="_blank" rel="noopener">Patient resources</a>
       <a href="#about">About</a>
@@ -614,7 +614,7 @@
       <a class="bookcall" href="tel:+442074835160"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg> 020 7483 5160</a>
     </div>
     <div class="form-card reveal">
-      <div id="formMsg" class="form-msg"></div>
+      <div id="formMsg" class="form-msg" role="status" aria-live="polite"></div>
       <form id="apptForm" action="https://api.web3forms.com/submit" method="POST">
         <!-- SETUP: create a free key at web3forms.com registered to chinmayguptepa@hcahealthcare.co.uk,
              then paste it below. Submissions then email automatically to that address. -->
@@ -647,13 +647,13 @@
       <h2>Common questions</h2>
     </div>
     <div class="faq-list">
-      <details class="faq reveal"><summary><button type="button">Do I need a GP referral to be seen?<span class="chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></button></summary><div class="ans"><p>No. You're welcome to book a self-referred consultation. That said, if you're using insurance, your provider may want a GP referral first, so it's worth checking your policy.</p></div></details>
-      <details class="faq reveal"><summary><button type="button">Can I use private medical insurance, or pay for myself?<span class="chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></button></summary><div class="ans"><p>Both. If you're insured, check your policy and bring your authorisation number — some insurers ask for a GP referral first. Self-pay patients are just as welcome: you'll get a clear written quote for the consultation, any imaging and any treatment before anything goes ahead. Call <a class="ilink" href="tel:+442074835160">020 7483 5160</a> for current fees.</p></div></details>
-      <details class="faq reveal"><summary><button type="button">Will I have a scan at my first appointment?<span class="chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></button></summary><div class="ans"><p>Often the consultation itself is enough to reach a diagnosis. If a scan would help, we can arrange <a class="ilink" href="https://www.sportshealing.com/mri-your-knee/" target="_blank" rel="noopener">priority MRI</a> and go through the results with you.</p></div></details>
-      <details class="faq reveal"><summary><button type="button">Do you offer non-surgical treatment?<span class="chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></button></summary><div class="ans"><p>Yes. A lot of knee problems are best handled without surgery, using physiotherapy, <a class="ilink" href="https://www.sportshealing.com/knee-injections/" target="_blank" rel="noopener">targeted injections</a> and activity advice. We only recommend surgery when it's genuinely the right call.</p></div></details>
-      <details class="faq reveal"><summary><button type="button">How quickly can I be seen?<span class="chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></button></summary><div class="ans"><p>We aim to see you quickly. Send us your availability and we'll get you booked in.</p></div></details>
-      <details class="faq reveal"><summary><button type="button">How do I choose the best knee surgeon in Chiswick?<span class="chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></button></summary><div class="ans"><p>Look for a fellowship-trained consultant with a strong academic record and real outcomes in your specific problem. Mr Gupte is a Consultant Orthopaedic Surgeon and Clinical Reader at Imperial College London, director of the Wellington Knee Unit, with 80+ peer-reviewed publications and the BOA Robert Jones Gold Medal. <a class="ilink" href="https://www.chinmaygupte.com/about-mr-gupte" target="_blank" rel="noopener">Read his full profile</a> and judge for yourself.</p></div></details>
-      <details class="faq reveal"><summary><button type="button">What support is there after treatment or surgery?<span class="chev"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></button></summary><div class="ans"><p>Recovery is planned before treatment starts. You leave with a personalised rehabilitation plan, and the <a class="ilink" href="https://www.omkneehealth.com/" target="_blank" rel="noopener">Omknee Health</a> range — recovery supplements, wound care and waterproof covers — supports you at home between appointments.</p></div></details>
+      <details class="faq reveal"><summary>Do I need a GP referral to be seen?<span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans"><p>No. You're welcome to book a self-referred consultation. That said, if you're using insurance, your provider may want a GP referral first, so it's worth checking your policy.</p></div></details>
+      <details class="faq reveal"><summary>Can I use private medical insurance, or pay for myself?<span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans"><p>Both. If you're insured, check your policy and bring your authorisation number — some insurers ask for a GP referral first. Self-pay patients are just as welcome: you'll get a clear written quote for the consultation, any imaging and any treatment before anything goes ahead. Call <a class="ilink" href="tel:+442074835160">020 7483 5160</a> for current fees.</p></div></details>
+      <details class="faq reveal"><summary>Will I have a scan at my first appointment?<span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans"><p>Often the consultation itself is enough to reach a diagnosis. If a scan would help, we can arrange <a class="ilink" href="https://www.sportshealing.com/mri-your-knee/" target="_blank" rel="noopener">priority MRI</a> and go through the results with you.</p></div></details>
+      <details class="faq reveal"><summary>Do you offer non-surgical treatment?<span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans"><p>Yes. A lot of knee problems are best handled without surgery, using physiotherapy, <a class="ilink" href="https://www.sportshealing.com/knee-injections/" target="_blank" rel="noopener">targeted injections</a> and activity advice. We only recommend surgery when it's genuinely the right call.</p></div></details>
+      <details class="faq reveal"><summary>How quickly can I be seen?<span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans"><p>We aim to see you quickly. Send us your availability and we'll get you booked in.</p></div></details>
+      <details class="faq reveal"><summary>How do I choose the best knee surgeon in Chiswick?<span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans"><p>Look for a fellowship-trained consultant with a strong academic record and real outcomes in your specific problem. Mr Gupte is a Consultant Orthopaedic Surgeon and Clinical Reader at Imperial College London, director of the Wellington Knee Unit, with 80+ peer-reviewed publications and the BOA Robert Jones Gold Medal. <a class="ilink" href="https://www.chinmaygupte.com/about-mr-gupte" target="_blank" rel="noopener">Read his full profile</a> and judge for yourself.</p></div></details>
+      <details class="faq reveal"><summary>What support is there after treatment or surgery?<span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></span></summary><div class="ans"><p>Recovery is planned before treatment starts. You leave with a personalised rehabilitation plan, and the <a class="ilink" href="https://www.omkneehealth.com/" target="_blank" rel="noopener">Omknee Health</a> range — recovery supplements, wound care and waterproof covers — supports you at home between appointments.</p></div></details>
     </div>
     <div class="faq-cta reveal">
       <p>Still have a question? Our team is happy to help.</p>
