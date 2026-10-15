@@ -3,7 +3,7 @@
 Site: https://chiswickkneeclinic.com/
 Live version: v0.2.0
 Deployed: 11 September 2026
-Repository: sportshealingcalendar-ops/Chiswick-Knee-Clinic
+Repository: SportsHealing/Chiswick-Knee-Clinic
 Deploy branch: dev
 
 Three tasks remain. None block the site from running. All three affect how it is judged.
