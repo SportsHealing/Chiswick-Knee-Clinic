@@ -183,6 +183,16 @@
   .band h2{color:#fff;font-size:38px;margin-bottom:16px}
   .band p{color:rgba(255,255,255,.82);font-size:18px;margin-bottom:30px}
 
+  /* ---------- Children ---------- */
+  .kids{background:var(--greige)}
+  .flags{margin-top:34px;background:var(--card);border-radius:var(--r-md);border-left:5px solid var(--gold);
+    padding:28px 32px;box-shadow:var(--shadow)}
+  .flags h3{font-size:21px;margin-bottom:12px}
+  .flags ul{margin:0 0 16px 20px;font-size:15.5px}
+  .flags li{margin-bottom:6px}
+  .flags .urgent{background:#f7ece9;color:#8a3524;border:1px solid #e8cfc8;border-radius:8px;padding:12px 16px;font-size:15px;font-weight:600}
+  .kids .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+
   /* ---------- FAQ ---------- */
   .faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
   .faq{background:var(--card);border-radius:var(--r-md);border:1px solid var(--line);overflow:hidden}
@@ -613,6 +623,51 @@
   </div>
 </section>
 
+<!-- ============ CHILDREN ============ -->
+<section class="kids" id="children">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow"><img class="eb-mono" src="assets/sportshealing-monogram.png" alt=""><span>Children and teenagers</span></span>
+      <h2>Knee care for children and young athletes</h2>
+      <p>Young knees are still growing, so their injuries are not always the same as an adult's. Mr Gupte treats both children and adults, and plans your child's care around how much growing they have left.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="cic"><svg viewBox="0 0 24 24"><path d="M6 4c3 4 3 12 0 16M18 4c-3 4-3 12 0 16M6 8h12M6 16h12"/></svg></div>
+        <h3>Sports injuries and ACL tears</h3>
+        <p>ACL tears in children need care that protects the growth plates, the soft growing areas near the ends of the bones. If surgery is needed, the technique is chosen to suit your child's age and growth.</p>
+      </div>
+      <div class="card reveal">
+        <div class="cic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 6c2 3 2 9 0 12M6 12c3-2 9-2 12 0"/></svg></div>
+        <h3>Meniscus and discoid meniscus</h3>
+        <p>A discoid meniscus is an unusually shaped cartilage pad, seen mostly in younger children. It can cause clicking, catching or a knee that will not fully straighten. Torn cartilage in children is repaired where possible, to save the natural knee.</p>
+      </div>
+      <div class="card reveal">
+        <div class="cic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg></div>
+        <h3>Kneecap problems and knock knees</h3>
+        <p>A kneecap that slips out of place, and knock knees (genu valgum), are assessed with your child's growth in mind. Many are managed without surgery.</p>
+      </div>
+    </div>
+    <div class="flags reveal">
+      <h3>When to get your child's knee checked</h3>
+      <p style="margin-bottom:10px">After a knee injury, book a specialist assessment if:</p>
+      <ul>
+        <li>the knee swells up within a few hours</li>
+        <li>your child cannot put weight on the leg</li>
+        <li>they cannot lift the leg straight while lying down</li>
+        <li>the knee locks, catches or gives way</li>
+      </ul>
+      <p style="margin-bottom:16px">Swelling after an injury can mean a serious injury inside the knee, even when an X-ray looks normal.</p>
+      <p class="urgent">Go to A&amp;E now if your child's foot is cold, pale or numb, or if the pain is severe and getting worse.</p>
+    </div>
+    <div class="cta-row reveal">
+      <a class="btn btn-primary" href="#book">Book a consultation for your child
+        <svg viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <a class="btn btn-outline" href="tel:+442074835160">Call 020 7483 5160</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA BAND ============ -->
 <!-- ============ BOOK APPOINTMENT ============ -->
 <section class="book" id="book">
@@ -786,6 +841,7 @@
           <li><a href="#book">Book appointment</a></li>
           <li><a href="#about">About the clinic</a></li>
           <li><a href="#treat">Treatments</a></li>
+          <li><a href="#children">Children’s knees</a></li>
           <li><a href="#faq">Patient resources</a></li>
           <li><a href="#locations">Locations</a></li>
           <li><a href="https://www.sportshealing.com/" target="_blank" rel="noopener">SportsHealing</a></li>
